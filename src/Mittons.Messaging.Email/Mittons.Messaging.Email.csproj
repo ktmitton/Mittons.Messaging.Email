@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Mittons.Messaging.Email</PackageId>
+    <PackageVersion>1.0.0-preview.1</PackageVersion>
+    <Authors>Kenneth Mitton</Authors>
+    <Description>Abstracts email messaging functionality to simplify sending emails and creating templates via razor files.</Description>
+    <Copyright>Copyright (c) Kenneth Mitton 2026</Copyright>
+    <PackageProjectUrl>https://github.com/ktmitton/Mittons.Messaging.Email</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ktmitton/Mittons.Messaging.Email</RepositoryUrl>
+    <RespositoryType>git</RespositoryType>
+    <PackageTags>email;mailkit;razor</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <IsPackable>true</IsPackable>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="4.15.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference
+      Include="..\Mittons.Messaging.Email.SourceGenerator\Mittons.Messaging.Email.SourceGenerator.csproj"
+      OutputItemType="Analyzer"
+      ReferenceOutputAssembly="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None
+      Include="$(MSBuildProjectDirectory)\..\Mittons.Messaging.Email.SourceGenerator\bin\$(Configuration)\netstandard2.0\Mittons.Messaging.Email.SourceGenerator.dll"
+      Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+  </ItemGroup>
+</Project>
