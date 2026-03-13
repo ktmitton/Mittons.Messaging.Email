@@ -2,8 +2,8 @@ using Microsoft.AspNetCore.Components;
 
 namespace Mittons.Messaging.Email.Example.Templates;
 
-[EmailTemplate("InvoiceEmail")]
-public partial class InvoiceEmail
+[EmailTemplate("InvoiceEmailWithLayout")]
+public partial class InvoiceEmailWithLayout
 {
     [Parameter]
     public required string InvoiceNumber { get; set; }

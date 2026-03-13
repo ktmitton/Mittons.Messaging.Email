@@ -13,7 +13,16 @@ using IHost host = builder.Build();
 
 var emailService = host.Services.GetRequiredService<IEmailService>();
 
-await emailService.SendInvoiceEmailAsync(
+await emailService.SendInvoiceEmailWithoutLayoutAsync(
+    "INV-12345",
+    DateTime.UtcNow,
+    99.9m,
+    "Your Invoice",
+    "no-reply@example.com",
+    ["recipient@example.com"]
+);
+
+await emailService.SendInvoiceEmailWithLayoutAsync(
     "INV-12345",
     DateTime.UtcNow,
     99.9m,
