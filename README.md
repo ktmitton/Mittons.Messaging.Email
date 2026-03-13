@@ -111,6 +111,8 @@ For the purposes of this example, we'll generate the same email content, but wra
 
 Our end goal is a email that looks like this:
 
+![alt text](image-1.png)
+
 To achieve this, we first need to create a layout template file names `DefaultEmailLayout.razor` with the following contents:
 
 ```cshtml
