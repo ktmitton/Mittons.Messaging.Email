@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
-namespace Mittons.Messaging.Email.SourceGenerator.Tests;
+namespace Mittons.Messaging.Email.SourceGenerator.Tests.Unit;
 
 public class GeneratorTests
 {

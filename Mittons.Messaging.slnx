@@ -1,8 +1,10 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/Mittons.Messaging.Email.Example/Mittons.Messaging.Email.Example.csproj" />
-    <Project Path="src/Mittons.Messaging.Email.SourceGenerator.Tests/Mittons.Messaging.Email.SourceGenerator.Tests.csproj" />
     <Project Path="src/Mittons.Messaging.Email.SourceGenerator/Mittons.Messaging.Email.SourceGenerator.csproj" />
     <Project Path="src/Mittons.Messaging.Email/Mittons.Messaging.Email.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Mittons.Messaging.Email.SourceGenerator.Tests.Unit/Mittons.Messaging.Email.SourceGenerator.Tests.Unit.csproj" />
   </Folder>
 </Solution>

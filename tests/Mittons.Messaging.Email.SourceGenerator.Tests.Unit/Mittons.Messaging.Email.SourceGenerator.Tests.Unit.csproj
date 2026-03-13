@@ -10,8 +10,8 @@
   <ItemGroup>
     <PackageReference Include="TUnit" Version="1.*" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="5.0.0" />
-    <ProjectReference Include="..\Mittons.Messaging.Email.SourceGenerator\Mittons.Messaging.Email.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="true" />
-    <ProjectReference Include="..\Mittons.Messaging.Email\Mittons.Messaging.Email.csproj" />
+    <ProjectReference Include="..\..\src\Mittons.Messaging.Email.SourceGenerator\Mittons.Messaging.Email.SourceGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="true" />
+    <ProjectReference Include="..\..\src\Mittons.Messaging.Email\Mittons.Messaging.Email.csproj" />
   </ItemGroup>
 
 </Project>
