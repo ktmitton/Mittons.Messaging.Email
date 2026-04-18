@@ -7,18 +7,20 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
+using Mittons.Messaging.Email.SourceGenerator.Tests;
+
 #nullable enable
-namespace Mittons.Messaging.Email.SourceGenerator.Tests
+namespace Mittons.Messaging.Email
 {
     public static class InvoiceEmail_EmailServiceExtensions
     {
         public static Task SendInvoiceEmailAsync(
-            this EmailService emailService,
+            this IEmailService emailService,
             string invoiceNumber,
             DateTime invoiceDate,
             string subject,
             string from,
-            IEnumerable<string>? to,
+            IEnumerable<string>? to = default,
             IEnumerable<string>? cc = default,
             IEnumerable<string>? bcc = default,
             IEnumerable<string>? replyTo = default,
@@ -39,12 +41,12 @@ namespace Mittons.Messaging.Email.SourceGenerator.Tests
             );
 
         public static Task SendInvoiceEmailAsync(
-            this EmailService emailService,
+            this IEmailService emailService,
             string invoiceNumber,
             DateTime invoiceDate,
             string subject,
             MailboxAddress from,
-            IEnumerable<MailboxAddress>? to,
+            IEnumerable<MailboxAddress>? to = default,
             IEnumerable<MailboxAddress>? cc = default,
             IEnumerable<MailboxAddress>? bcc = default,
             IEnumerable<MailboxAddress>? replyTo = default,
@@ -68,12 +70,12 @@ namespace Mittons.Messaging.Email.SourceGenerator.Tests
             );
 
         public static Task SendOrderEmailAsync(
-            this EmailService emailService,
+            this IEmailService emailService,
             string invoiceNumber,
             DateTime invoiceDate,
             string subject,
             string from,
-            IEnumerable<string>? to,
+            IEnumerable<string>? to = default,
             IEnumerable<string>? cc = default,
             IEnumerable<string>? bcc = default,
             IEnumerable<string>? replyTo = default,
@@ -94,12 +96,12 @@ namespace Mittons.Messaging.Email.SourceGenerator.Tests
             );
 
         public static Task SendOrderEmailAsync(
-            this EmailService emailService,
+            this IEmailService emailService,
             string invoiceNumber,
             DateTime invoiceDate,
             string subject,
             MailboxAddress from,
-            IEnumerable<MailboxAddress>? to,
+            IEnumerable<MailboxAddress>? to = default,
             IEnumerable<MailboxAddress>? cc = default,
             IEnumerable<MailboxAddress>? bcc = default,
             IEnumerable<MailboxAddress>? replyTo = default,

@@ -99,19 +99,19 @@ public class EmailService(IOptionsSnapshot<SmtpSettings> smtpSettings, IServiceP
             {
                 if (attachment.Content is not null && attachment.ContentType is not null)
                 {
-                    await body.Attachments.AddAsync(attachment.FileName, attachment.Content, attachment.ContentType);
+                    await body.Attachments.AddAsync(attachment.FileName, attachment.Content, attachment.ContentType, cancellationToken).ConfigureAwait(false);
                 }
                 else if (attachment.Content is not null)
                 {
-                    await body.Attachments.AddAsync(attachment.FileName, attachment.Content);
+                    await body.Attachments.AddAsync(attachment.FileName, attachment.Content, cancellationToken).ConfigureAwait(false);
                 }
                 else if (attachment.ContentType is not null)
                 {
-                    await body.Attachments.AddAsync(attachment.FileName, attachment.ContentType);
+                    await body.Attachments.AddAsync(attachment.FileName, attachment.ContentType, cancellationToken).ConfigureAwait(false);
                 }
                 else
                 {
-                    await body.Attachments.AddAsync(attachment.FileName);
+                    await body.Attachments.AddAsync(attachment.FileName, cancellationToken).ConfigureAwait(false);
                 }
             }
         }

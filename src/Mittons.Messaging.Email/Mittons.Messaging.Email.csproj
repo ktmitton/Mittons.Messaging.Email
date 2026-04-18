@@ -8,7 +8,7 @@
 
   <PropertyGroup>
     <PackageId>Mittons.Messaging.Email</PackageId>
-    <PackageVersion>1.0.0-preview.1</PackageVersion>
+    <PackageVersion>0.1.0</PackageVersion>
     <Authors>Kenneth Mitton</Authors>
     <Description>Abstracts email messaging functionality to simplify sending emails and creating templates via razor files.</Description>
     <Copyright>Copyright (c) Kenneth Mitton 2026</Copyright>
@@ -26,8 +26,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MailKit" Version="4.15.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.3" />
+    <PackageReference Include="MailKit" Version="4.16.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="10.0.6" />
   </ItemGroup>
 
   <ItemGroup>
